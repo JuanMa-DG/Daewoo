@@ -7,6 +7,9 @@ const session = require("express-session");
 const MySQLStore = require("express-mysql-session");
 const { database } = require("./keys");
 const passport = require("passport");
+const { config } = require('dotenv');
+config();
+
 // Inicializaciones
 // 
 const app = express();
