@@ -1,0 +1,29 @@
+<div class="pmtv-link-list container p-4">
+    <div class="row">
+        {{#each links}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">                        
+                        <h3 class="card-title text-uppercase">{{titulo}}</h3>
+                        <p>${{precio}}</p>
+                        <p>{{detalle_principal}}</p>
+                        <p>Editado hace: {{timeago fecha_publicacion}}</p>
+                        <a href="/links/delete/{{id}}" class="btn btn-danger">Borrar Producto</a>
+                        <a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a>                       
+                    </div>
+                </div>
+            </div>
+         {{else}}
+               <div>
+                   <div class="col-md-4 mx-auto">
+                        <div>
+                            <div class="card card-body text-center">
+                                <p class="mt-3">No hay productos cargados</p>
+                                <a class="mb-3" href="/links/add">Cargar Producto</a>
+                            </div>
+                        </div>
+                   </div>
+               </div>
+        {{/each}}
+    </div>
+</div>
